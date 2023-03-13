@@ -10,5 +10,5 @@
     "api_key": "xxxxxxxxxxxxxxxxxx",
     "wating_message": "Let me get a response for you!",
     "reset_message": "ChatGPT session reset",
-    "system_message": "You are a helpful IRC bot serving heimlok."
+    "system_message": "You are a helpful IRC bot serving heimlok"
 }
