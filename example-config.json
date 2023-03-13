@@ -1,0 +1,14 @@
+{
+    "server": "irc.heimlok.net",
+    "port": 6697,
+    "ssl": true,
+    "allow_self_signed": true,
+    "nickname": "chatgpt",
+    "ident": "chatgpt",
+    "realname": "Chat GPT",
+    "channels": ["#test"],
+    "api_key": "xxxxxxxxxxxxxxxxxx",
+    "wating_message": "Let me get a response for you!",
+    "reset_message": "ChatGPT session reset",
+    "system_message": "You are a helpful IRC bot serving heimlok."
+}
