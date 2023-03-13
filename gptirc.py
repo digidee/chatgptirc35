@@ -89,7 +89,6 @@ async def irc_client(**options):
     sendline = functools.partial(send_line_to_writer, writer)
     sendcmd = functools.partial(send_cmd_to_writer, writer)
 
-
     sendline("NICK {nickname}".format(**options))
     sendline("USER {ident} * * :{realname}".format(**options))
     
