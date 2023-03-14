@@ -150,7 +150,7 @@ async def irc_client(**options):
                     prompt = parts[1:]
                     prompt = " ".join(prompt)
                     messages = [{"role": "system", "content": f"{prompt}"}]
-                    sendcmd("PRIVMSG", target, to_source +"Chat GPT system context changed "+f"{prompt}")
+                    sendcmd("PRIVMSG", target, to_source +"Chat GPT system context changed")
                     sendcmd("PRIVMSG", target, to_source +f"{messages}")
                     continue
 
@@ -163,7 +163,7 @@ async def irc_client(**options):
                     prompt = parts[1:]
                     prompt = " ".join(prompt)
                     messages = [{"role": "system", "content": f"{prompt}"}]
-                    sendcmd("PRIVMSG", target, to_source +"Chat GPT system context changed "+f"{prompt}")
+                    sendcmd("PRIVMSG", target, to_source +"Chat GPT system context changed")
                     sendcmd("PRIVMSG", target, to_source +f"{messages}")
                     continue
 
