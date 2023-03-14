@@ -198,12 +198,13 @@ def generate_response(prompt):
     messages.append({"role": "user", "content": f"{prompt}"})
     #print(json.dumps(messages))
     # Generate a response using the OpenAI API
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
-
-    message = response['choices'][0]['message']['content']
-
-    return message
-
+    try:
+        response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
+        message = response['choices'][0]['message']['content']
+        return message
+    except IndexError:
+         # raise IndexError()
+        return ["We couldn't get a response for you, please try again"]
 
 
 def parse_outgoing(message):
