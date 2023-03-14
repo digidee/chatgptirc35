@@ -210,7 +210,7 @@ def parse_outgoing(message):
     lines = message.split("\n")
     messages = []
     for line in lines:
-        if len(line) > 350:
+        if len(line) > 400:
             words = line.split(" ")
             current_message = ""
             for word in words:
