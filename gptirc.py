@@ -196,7 +196,7 @@ async def handle_message(sendcmd, target, to_source, message):
 def generate_response(prompt):
     global messages
     messages.append({"role": "user", "content": f"{prompt}"})
-    print(json.dumps(messages))
+    #print(json.dumps(messages))
     # Generate a response using the OpenAI API
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
 
