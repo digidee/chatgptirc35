@@ -188,9 +188,9 @@ async def handle_message(sendcmd, target, to_source, message):
     prompt = message.replace(f"{options['nickname']}:", "")
     response = generate_response(prompt)
     
-    for line in response.split('\n\n'):
-        for msg in parse_outgoing(line):
-            sendcmd("PRIVMSG", target, to_source +f"{msg}")
+    #for line in response.split('\n\n'):
+    for msg in parse_outgoing(response):
+        sendcmd("PRIVMSG", target, to_source +f"{msg}")
 
 
 def generate_response(prompt):
@@ -203,8 +203,7 @@ def generate_response(prompt):
         message = response['choices'][0]['message']['content']
         return message
     except:
-         # raise IndexError()
-        return ["We couldn't get a response for you, please try again"]
+        return "We couldn't get a response for you, please try again"
 
 
 def parse_outgoing(message):
@@ -215,7 +214,7 @@ def parse_outgoing(message):
             words = line.split(" ")
             current_message = ""
             for word in words:
-                if len(current_message) + len(word) + 1 <= 350:
+                if len(current_message) + len(word) + 1 <= 400:
                     current_message += word + " "
                 else:
                     messages.append(current_message)
