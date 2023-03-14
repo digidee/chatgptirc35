@@ -202,7 +202,7 @@ def generate_response(prompt):
         response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
         message = response['choices'][0]['message']['content']
         return message
-    except IndexError:
+    except:
          # raise IndexError()
         return ["We couldn't get a response for you, please try again"]
 
