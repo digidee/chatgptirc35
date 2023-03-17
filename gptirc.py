@@ -199,7 +199,7 @@ def generate_response(prompt):
     #print(json.dumps(messages))
     # Generate a response using the OpenAI API
     try:
-        response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
+        response = openai.ChatCompletion.create(model="gpt-4", messages=messages)
         message = response['choices'][0]['message']['content']
         return message
     except:
